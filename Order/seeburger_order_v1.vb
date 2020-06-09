@@ -226,7 +226,7 @@ Namespace Seeburger
 
                 Else
                     With TryCast(dueField.Item, wky)
-                        this = DateAdd(DateInterval.WeekOfYear, CInt(.WW), New Date(.YY, 1, 1))
+                        this = DateAdd(DateInterval.WeekOfYear, CInt(.WW) - 1, New Date(.YY, 1, 1))
 
                     End With
                 End If

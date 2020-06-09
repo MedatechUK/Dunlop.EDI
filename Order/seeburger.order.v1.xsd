@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://tempuri.org/seeburger.order.v1.xsd">
+
+  <xs:element name="dmy">
+    <xs:complexType>
+      <xs:attribute name="DD" type="xs:integer"  use="required"/>
+      <xs:attribute name="MM" type="xs:integer"  use="required"/>
+      <xs:attribute name="YY" type="xs:integer"  use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="wky">
+    <xs:complexType>
+      <xs:attribute name="WW" type="xs:integer"  use="required"/>
+      <xs:attribute name="YY" type="xs:integer"  use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="due">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="dmy" />
+        <xs:element ref="wky"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="custtype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16" />
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="parttype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="22" />
+      <xs:minLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="sitetype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+      <xs:minLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="potype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="25" />
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="Orders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="Order">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="item" >
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="due"  />
+                  </xs:sequence>
+                  <xs:attribute name="Part" type="parttype" use="required" />
+                  <xs:attribute name="Qty" type="xs:positiveInteger" use="required" />
+                  <xs:attribute name="Site" type="sitetype" use="required" />
+                  <xs:attribute name="PO" type="potype" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Cust" type="custtype" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

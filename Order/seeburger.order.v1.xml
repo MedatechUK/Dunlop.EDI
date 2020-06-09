@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Orders>
+  <Order Cust="12345">
+    <item Part="ABC123" Qty="1" Site="ABCD" PO="ABC123">
+      <due>
+        <wky WW="1" YY="2021"/>
+      </due>
+    </item>
+    <item Part="ABC321" Qty="2" Site="ABCD" PO="abcde">
+      <due>
+        <dmy DD="31" MM="12"  YY="2020" />
+      </due>
+    </item>
+  </Order>
+  <Order Cust="456789">    
+    <item Part="ABC321" Qty="4" Site="ABCD" PO="ABC123" >
+      <due>
+        <wky WW ="1" YY="2020"/>
+      </due>
+    </item>
+  </Order>
+</Orders>

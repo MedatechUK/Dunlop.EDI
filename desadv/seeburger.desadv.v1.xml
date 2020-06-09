@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Despatch>
+  <Vendor Name="VEND123" PO="PO123456" Doc="VDN000001">
+    <Part Name="ABC123" Qty="1" Price="9.99"/>
+    <Part Name="ABC456" Qty="2" Price="19.99"/>
+    
+  </Vendor>
+  
+  <Vendor Name="VEND987" PO="PO123456" Doc="VDN000001">
+    <Part Name="ABC123" Qty="1" Price="9.99"/>
+    <Part Name="ABC456" Qty="2" Price="19.99"/>
+
+  </Vendor>
+  
+</Despatch>

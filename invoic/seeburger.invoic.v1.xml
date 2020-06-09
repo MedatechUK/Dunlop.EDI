@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<invoice>
+  <iv Vendor="VEND001" PO="PO000123" Doc="DOC000321" Ref="abc-def-ghi" Net="99.99" Vat="20.00" Total="199.99" Type="Credit">
+    <item Part="PART00123" Qty="5" Each="10.00" Line="50.00"/>
+    <item Part="PART00056" Qty="10" Each="5.00" Line="50.00"/>
+  
+  </iv>
+  
+  <iv Vendor="VEND8765" PO="PO005123" Doc="DOC020321" Ref="jkl-def-ghi" Net="99.99" Vat="20.00" Total="199.99" Type="Debit">
+    <item Part="PART00123" Qty="5" Each="10.00" Line="50.00"/>
+    <item Part="PART00056" Qty="10" Each="5.00" Line="50.00"/>
+
+  </iv>
+  
+</invoice>
+  

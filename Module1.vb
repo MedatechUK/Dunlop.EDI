@@ -11,6 +11,9 @@ Module Module1
         With args
 
             Try
+
+#Region "Seeburger.Orders"
+
                 Dim orders As Seeburger.Orders = .Deserial(
                     New FileInfo("M:\Dunlop.EDI\Order\seeburger.order.v1.xml"),
                     GetType(Seeburger.Orders)
@@ -42,6 +45,10 @@ Module Module1
 
                 End Using
 
+#End Region
+
+#Region "Seeburger.Despatch"
+
                 Dim desadv As Seeburger.Despatch = .Deserial(
                     New FileInfo("M:\Dunlop.EDI\desadv\seeburger.desadv.v1.xml"),
                     GetType(Seeburger.Despatch)
@@ -72,6 +79,10 @@ Module Module1
                     Next
 
                 End Using
+
+#End Region
+
+#Region "Seeburger.invoice"
 
                 Dim invoic As Seeburger.invoice = .Deserial(
                     New FileInfo("M:\Dunlop.EDI\invoic\seeburger.invoic.v1.xml"),
@@ -118,6 +129,7 @@ Module Module1
 
                 End Using
 
+#End Region
 
             Catch ex As Exception
                 Console.WriteLine(ex.Message)

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Orders>
   <Order Cust="12345">
-    <item Part="ABC123" Qty="1" Site="ABCD" PO="ABC123">
+    <item Part="MorningTest" Qty="1" Site="ABCD" PO="ABC123">
       <due>
         <wky WW="1" YY="2021"/>
       </due>
@@ -11,8 +11,13 @@
         <dmy DD="31" MM="12"  YY="2020" />
       </due>
     </item>
+    <item Part="BCD001234" PO="PO00036463" Qty="1" Site="NBFJ">
+      <due>
+        <wky WW="3" YY="2021"/>
+      </due>
+    </item>
   </Order>
-  <Order Cust="456789">    
+  <Order Cust="456789">
     <item Part="ABC321" Qty="4" Site="ABCD" PO="ABC123" >
       <due>
         <wky WW ="1" YY="2020"/>

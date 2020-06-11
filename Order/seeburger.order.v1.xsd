@@ -1,18 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://tempuri.org/seeburger.order.v1.xsd">
 
+  <xs:simpleType name="day">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="31"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="week">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="53"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="month">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="year">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="2020"/>
+      <xs:maxInclusive value="9999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
   <xs:element name="dmy">
     <xs:complexType>
-      <xs:attribute name="DD" type="xs:integer"  use="required"/>
-      <xs:attribute name="MM" type="xs:integer"  use="required"/>
-      <xs:attribute name="YY" type="xs:integer"  use="required"/>
+      <xs:attribute name="DD" type="day"  use="required"/>
+      <xs:attribute name="MM" type="month"  use="required"/>
+      <xs:attribute name="YY" type="year"  use="required"/>
     </xs:complexType>
   </xs:element>
 
   <xs:element name="wky">
     <xs:complexType>
-      <xs:attribute name="WW" type="xs:integer"  use="required"/>
-      <xs:attribute name="YY" type="xs:integer"  use="required"/>
+      <xs:attribute name="WW" type="week"  use="required"/>
+      <xs:attribute name="YY" type="year"  use="required"/>
     </xs:complexType>
   </xs:element>
 

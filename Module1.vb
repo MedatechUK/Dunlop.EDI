@@ -99,9 +99,9 @@ Module Module1
                                 .TEXT4 = iv.Ref
                                 Select Case iv.Type
                                     Case Seeburger.transtype.Credit
-                                        .TEXT5 = "Y"
+                                        .TEXT5 = "C"
                                     Case Seeburger.transtype.Debit
-                                        .TEXT5 = "N"
+                                        .TEXT5 = "D"
 
                                 End Select
 

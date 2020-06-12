@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="vendtype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16" />
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="potype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="25" />
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name = "transtype">
+    <xs:restriction base = "xs:string">
+      <xs:enumeration value = "Credit"/>
+      <xs:enumeration value = "Debit"/>
+      <xs:length value = "3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="parttype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="22" />
+      <xs:minLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="doctype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16" />
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="reftype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="25" />
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:element name="invoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="iv">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="item">
+                <xs:complexType>
+                  <xs:attribute name="Part" type="parttype" use="required" />
+                  <xs:attribute name="Qty" type="xs:positiveInteger" use="required" />
+                  <xs:attribute name="Each" type="xs:decimal" use="required" />
+                  <xs:attribute name="Line" type="xs:decimal" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            
+            <xs:attribute name="Vendor" type="vendtype" use="required" />
+            <xs:attribute name="PO" type="potype" use="required" />
+            <xs:attribute name="Doc" type="doctype" use="required" />
+            <xs:attribute name="Ref" type="reftype" use="required" />
+            <xs:attribute name="Net" type="xs:decimal" use="required" />
+            <xs:attribute name="Vat" type="xs:decimal" use="required" />
+            <xs:attribute name="Total" type="xs:decimal" use="required" />
+            <xs:attribute name="Type" type="transtype" use="required" />
+            
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

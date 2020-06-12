@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:simpleType name="parttype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="22" />
+      <xs:minLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="vendtype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16" />
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="potype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="25" />
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="doctype">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16" />
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:element name="Despatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" name="Vendor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="Part">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="parttype" use="required" />
+                  <xs:attribute name="Qty" type="xs:positiveInteger" use="required" />
+                  <xs:attribute name="Price" type="xs:decimal" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Name" type="vendtype" use="required" />
+            <xs:attribute name="PO" type="potype" use="required" />
+            <xs:attribute name="Doc" type="doctype" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

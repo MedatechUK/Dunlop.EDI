@@ -11,6 +11,12 @@ Module Module1
         With args
 
             Try
+                If .Keys.Contains("?") Then
+                    .syntax()
+                    .wait()
+                    End
+
+                End If
 
 #Region "Seeburger.invoice"
 

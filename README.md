@@ -1,10 +1,12 @@
 # {Integration Name} Handover Document
 
-| Customer:	| --- |
-| Date:		| --- |
-| Devs:		| --- |
-| PMs:		| --- |
-| 3rd Parties:	| --- |
+|** **			|** **									|
+| ---			| ---									|
+| Customer:		| ---									|
+| Date:			| ---									|
+| Devs:			| ---									|
+| PMs:			| ---									|
+| 3rd Parties:	| ---									|
 
 ## Scope:
 
@@ -16,10 +18,12 @@
 
 ## Stack:
 
-| Code Base:	| Medatechuk.github.com/{project} |
+|** **			|** **									|
+| ---			| ---									|
+| Code Base:	| Medatechuk.github.com/{project}		|
 | Language(s):  | {.net / asp / html, xml, json, PriSQL / msSQL / etc} |
-| Packages:	| {Technologies/tools/nuGet packages involved in Integration} |
-| Logging:	| {where are errors stored?} |
+| Packages:		| {Technologies/tools/nuGet packages involved in Integration} |
+| Logging:		| {where are errors stored?}				|
 
 ## hrefs: {List of top-level code files}
 

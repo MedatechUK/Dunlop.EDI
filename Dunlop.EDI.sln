@@ -15,11 +15,16 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "seeburger.invoic", "invoic\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unwise", "unwise", "{DE5E4F75-E02B-4398-93F2-F27FC8C3B62D}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "seeburger.deserial", "unwise\dunlop.edi.vdproj", "{EC77D5E7-ABB9-4B78-B9F9-6603B087CE15}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "unwise", "unwise\dunlop.edi.vdproj", "{EC77D5E7-ABB9-4B78-B9F9-6603B087CE15}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ediftp", "..\MedatechEDI\ediftp\ediftp.vbproj", "{D5F6EBFB-C69A-49C2-99E6-1FE8B207B143}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{8A76C323-02FA-4CCF-B660-6D8ACB88B1E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2733DCF4-AEF4-4E9B-BB27-45D0108C5950}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

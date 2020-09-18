@@ -45,7 +45,6 @@ Module Module1
                                 .REAL2 = iv.Vat
                                 .REAL3 = iv.Total
 
-
                             End With
 
                             For Each i As seeburger.invoiceIVItem In iv.item
